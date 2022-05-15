@@ -1,0 +1,137 @@
+.hero {
+    max-width: 100vw;
+    height: 600px;
+    
+    background-image: url("../../static/landing.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hero > h1 {
+    text-align: center;
+    color: #1B333A;
+    text-shadow: 3px 2px 0px #FFF;
+}
+
+.hero > .buttons > a {
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.4em;
+    color: #FFF;
+    margin: 0px 20px;
+    padding: 7px 10px 10px 10px ;
+    border-radius: .42rem;
+}
+
+.hero > .buttons > a:nth-child(1) { background: #E9AA0A; }
+.hero > .buttons > a:nth-child(2) { background: #09c46a; }
+
+.landing > .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.landing > .heading > img { width: 300px; }
+.landing > .heading > span > h2 {
+    margin-bottom: 20px;
+    color: #2B4A4B;
+    text-decoration: underline;
+}
+
+.landing > .heading > span > p { 
+    padding: 5px; 
+}
+.landing > .heading.reverse { flex-direction: row-reverse;}
+.landing > .heading.reverse > span > * { text-align: right;}
+
+.join-us {
+    background: #85B3A9;
+    padding: 40px 25px;
+    box-sizing: border-box;
+}
+
+.join-us > h1 {
+    text-align: center;
+    color: #FFF;
+}
+
+.join-us > .icons-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.join-us > .icons-container > span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    color: #FFF;
+}
+
+.join-us > .icons-container > span > svg {
+    font-size: 4em;
+    border: 2px solid #FFF;
+    padding: 10px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: #1B333A;
+}
+
+.footer > .newsletter-signup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.footer > .newsletter-signup > h4 {
+    color: #FFF;
+    width: 60%;
+}
+
+.footer > .newsletter-signup > span {
+    display: flex;
+}
+
+.footer > .newsletter-signup > form > input {
+    padding: 6px;
+    border: 2px solid #E9AA0A;
+    background: none;
+    color: #E9AA0A;
+}
+.footer > .newsletter-signup > form > button {
+    background: #E9AA0A;
+    padding: 6px;
+    border: 2px solid #E9AA0A;
+    color: #1B333A;
+    cursor: pointer;
+}
+
+.footer > .social-media {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 10%;
+}
+
+.footer > .social-media > a {
+    color: #FFF;
+    font-size: 1.3em;
+}
