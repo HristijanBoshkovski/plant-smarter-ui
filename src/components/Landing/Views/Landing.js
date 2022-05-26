@@ -5,7 +5,7 @@ import { FaInstagram, FaFacebookF, FaTwitter } from 'react-icons/fa'
 import YoungTree from "../../../static/young-tree.jpg"
 import PersonaPlantingTree from "../../../static/person-planting-tree.jpg"
 
-import "../Landing.css"
+import "./Landing.css"
 import { useState } from "react"
 const Landing = props => {
 
