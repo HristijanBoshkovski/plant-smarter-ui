@@ -33,13 +33,16 @@
 .hero > .buttons > a:nth-child(2) { background: #09c46a; }
 
 .landing > .heading {
+    margin: 0px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 50px;
+    max-width: 1200px;
 }
 
 .landing > .heading > img { width: 300px; }
+.landing > .heading > span { max-width: 700px;}
 .landing > .heading > span > h2 {
     margin-bottom: 20px;
     color: #2B4A4B;
