@@ -1,0 +1,49 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: #1b3a31;
+}
+
+.footer > .newsletter-signup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.footer > .newsletter-signup > h4 {
+    color: #FFF;
+    width: 60%;
+}
+
+.footer > .newsletter-signup > span {
+    display: flex;
+}
+
+.footer > .newsletter-signup > form > input {
+    padding: 6px;
+    border: 2px solid #E9AA0A;
+    background: none;
+    color: #E9AA0A;
+}
+.footer > .newsletter-signup > form > button {
+    background: #E9AA0A;
+    padding: 6px;
+    border: 2px solid #E9AA0A;
+    color: #1B333A;
+    cursor: pointer;
+}
+
+.footer > .social-media {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 10%;
+}
+
+.footer > .social-media > a {
+    color: #FFF;
+    font-size: 1.3em;
+}
