@@ -64,7 +64,6 @@ p {
     text-align: justify;
 }
 .landing > .heading.reverse { flex-direction: row-reverse;}
-.landing > .heading.reverse > span > * { text-align: right;}
 
 .join-us {
     margin-right: 20px;

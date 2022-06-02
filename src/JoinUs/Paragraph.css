@@ -1,0 +1,73 @@
+.triangle-right {
+    width: 600px;
+    height: 600px;
+    position: relative;
+    background: url("../static/business.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
+}
+
+.triangle-left{
+    clip-path: polygon(0 50%, 100% 100%, 100% 0);
+    background: url("../static/individuals.jpg")
+}
+
+.triangle{
+    background: url(../static/kid-planting-trees.jpg);
+}
+
+.paragraph-container #business-par{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6%;
+}
+
+.paragraph-container p{
+    text-align: justify;
+}
+
+
+.paragraph-container #individuals-par{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6%;
+}
+
+.paragraph-container #schools-par{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6%;
+}
+
+.paragraph-container span{
+    margin-right: 5%;
+    padding: 30px;
+    padding-right: 40px;
+    width: 50%;
+    text-align: right;
+}
+
+.paragraph-container h1{
+    margin-bottom: 20px;
+    margin-right: 10px;
+    color: #1b1b1b;
+    font-size: 48px;
+}
+
+.paragraph-container p{
+    color: #1b1b1b;
+    font-size: 20px;
+    line-height: 1.5;
+    padding-bottom: 15px;
+}
+
+
+#individuals-par span{
+    text-align: left;
+    margin-left: 5%;
+}
+

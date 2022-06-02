@@ -7,6 +7,8 @@ import Plant from "../static/plant.jpg"
 import School from "../static/school.jpg"
 
 import './Joinus.css'
+import Paragraph from "./Paragraph"
+import Footer from "../Router/Footer"
 
 function Joinus() {
     return(
@@ -19,10 +21,14 @@ function Joinus() {
                 <h3>You already have an account? <a href="#0">Sign in now!</a></h3>
             </div>
             <div className="cards">
-                <Card picture={BusinessMan} value="Business" altText="business-man-card"/>
-                <Card picture={Plant} value="Individuals" altText="individuals-card"/>
-                <Card picture={School} value="School" altText="schools-card"/>
+                <Card picture={BusinessMan} value="Business" altText="business-man-card" linkRef="#business-par"/>
+                <Card picture={Plant} value="Individuals" altText="individuals-card" linkRef="#individuals-par"/>
+                <Card picture={School} value="School" altText="schools-card" linkRef="#schools-par"/>
             </div>
+            <div className="learn-more">
+                <Paragraph/>
+            </div>
+            <div className="ju-footer"><Footer/></div>
         </div>
     )
 }

@@ -7,11 +7,9 @@ import Landing from "../components/Landing/Views/Landing";
 import Input from "../components/Common/Forms/Input"
 import Select from "../components/Common/Forms/Select"
 import { useState } from "react";
-import { Button } from "../components/Common/Forms/Button";
-import { Card } from "../JoinUs/Card";
-import Man from "../static/businessman.jpg"
 import Nav from "../Router/Nav"
 import Joinus from "../JoinUs/Joinus";
+import Paragraph from "../JoinUs/Paragraph";
 
 const RootRouter = props => {
     const [user, setUser] = useState({ username: "", password: "", selected: [] })
@@ -40,9 +38,7 @@ const RootRouter = props => {
                     
                     {JSON.stringify(user)}
 
-                    <Button value='Join Us' styleClass={"btns btns-joinus"}/>
-
-                    <Card picture={Man} value={"Business"} altText={"Business Card"} btnValue={"REGISTER"} linkRef={"#0"}/>
+                    <Paragraph></Paragraph>
                 </div>} />
             </Routes>
         </Router>
