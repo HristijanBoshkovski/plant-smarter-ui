@@ -26,27 +26,20 @@ const Select = props => {
         return props.value.filter(i => i !== item[props.valKey])
     }
 
-    const handleChange = item => props.onChange({
-        target: { name: props.name, value: getValue(item) }
+    const handleChange = item => props.onChange({ 
+        target: { name: props.name, value: getValue(item) } 
     })
-
-    const filtered_options = props.options.filter(opt => opt[props.dispKey].toLowerCase().includes(filter.toLowerCase())).map(opt => ({ ...opt, checked: isChecked(opt) }))
-    const selected = props.options.filter(opt => isChecked(opt) === true)
+    
+    const filtered_options = props.options.filter(opt => opt[props.dispKey].toLowerCase().includes(filter.toLowerCase())).map(opt => ({...opt, checked: isChecked(opt)}))
 
     return (
         <div className="form-component select">
             {props.label !== undefined ? <label>{props.label}</label> : null}
-
-            <span className="select-top" onClick={e => setExpanded(!expanded)}>
-                {selected.map(opt => <p>{opt[props.dispKey]}</p>)}
-            </span>
-
+            
+            <span className="select-top" onClick={e => setExpanded(!expanded)}> {filtered_options.map(opt => opt.checked === true ? <p>{opt[props.dispKey]}</p> : null)} </span>
             <span className="select-bottom">
-                {props.disableSearch === true ?
-                    null :
-                    <Input name="filter" type="text" value={filter} onChange={e => setFilter(e.target.value)} />
-                }
-
+                {props.disableSearch === true ? null : <Input name="filter" type="text" value={filter} onChange={e => setFilter(e.target.value)} />}
+            
                 <ul className="select-options-container">
                     {filtered_options.map(opt => <Option handleChange={handleChange} option={opt} dispKey={props.dispKey} />)}
                 </ul>
