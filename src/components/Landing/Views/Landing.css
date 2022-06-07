@@ -2,7 +2,7 @@
     max-width: 100vw;
     height: 600px;
     
-    background-image: url("../../static/landing.png");
+    background-image: url("../../../static/landing.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
