@@ -1,0 +1,19 @@
+.form-component input{
+    width: 25%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.form-containter {
+    padding: 20px;
+}
+
+.form-component input:focus{
+    outline-color: #C8E690;
+    box-shadow:0 0 10px #C8E690;
+}

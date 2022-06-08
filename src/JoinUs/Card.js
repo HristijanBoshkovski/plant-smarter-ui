@@ -1,6 +1,9 @@
 import React from "react";
 import { Button } from "../components/Common/Forms/Button";
 import "../JoinUs/Card.css"
+import { useNavigate } from "react-router-dom"
+
+
 
 export const Card =({
     picture,
@@ -8,6 +11,9 @@ export const Card =({
     altText,
     linkRef
 }) =>{
+
+    let navigate = useNavigate();
+
     
     return (
         <div className="cards">
@@ -16,7 +22,7 @@ export const Card =({
                 <figcaption>
                     <div className="text-block">
                         <h1>{value}{"\n\n"}</h1>
-                        <Button styleClass={"btns btns-card"} value={"REGISTER"}></Button>
+                        <Button styleClass={"btns btns-card"} value={"REGISTER"} onClick={() => navigate('/register')}></Button>
                         <a href={linkRef}>Learn More</a>
                     </div>
             </figcaption>
