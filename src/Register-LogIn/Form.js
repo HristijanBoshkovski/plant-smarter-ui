@@ -13,7 +13,6 @@ const Form = props =>{
                 placeholder = "First Name"
                 name="name"
                 type="text"
-                value={user.name}
                 onChange={e => setUser({ ...user, [e.target.name]: e.target.value })}
             />
             <Input
@@ -21,6 +20,7 @@ const Form = props =>{
                 name="surename"
                 type="text"
                 value={user.surename}
+                styleClass="form-style"
                 onChange={e => setUser({ ...user, [e.target.surename]: e.target.value })}
             />
             <Input
@@ -28,6 +28,7 @@ const Form = props =>{
                 name="username"
                 type="text"
                 value={user.username}
+                styleClass="form-style"
                 onChange={e => setUser({ ...user, [e.target.username]: e.target.value })}
             />
             <Input
@@ -35,6 +36,7 @@ const Form = props =>{
                 name="password"
                 type="text"
                 value={user.password}
+                styleClass="form-style"
                 onChange={e => setUser({ ...user, [e.target.password]: e.target.value })}
             />
             <Input
@@ -42,9 +44,11 @@ const Form = props =>{
                 name="password"
                 type="text"
                 value={user.password}
+                styleClass="form-style"
                 onChange={e => setUser({ ...user, [e.target.password]: e.target.value })}
             />
-            <Button value="Submit"/>
+            
+            <Button value="Register" type="Submit" styleClass="btns btns-submit"/>
         </div>
     )
 }

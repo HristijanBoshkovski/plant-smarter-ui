@@ -1,3 +1,5 @@
+import "./Input.css"
+
 const Input = props => (
     <div className="form-component input">
         {props.label === undefined ? null : <label>{props.label}</label>}
