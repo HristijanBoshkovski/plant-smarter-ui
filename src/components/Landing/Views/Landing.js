@@ -1,27 +1,28 @@
-import { NavLink, Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { MdBusinessCenter, MdSchool, MdPerson } from 'react-icons/md'
-import { FaInstagram, FaFacebookF, FaTwitter } from 'react-icons/fa'
 
 import YoungTree from "../../../static/young-tree.jpg"
 import PersonaPlantingTree from "../../../static/person-planting-tree.jpg"
 
-import "./Landing.css"
-import { useState } from "react"
+import Nav from "../../../Router/Nav"
+import { Button } from "../../Common/Forms/Button"
+import Footer from "../../../Router/Footer"
+
+import "../Landing.css"
+
 const Landing = props => {
 
-    const [userEmail, setUserEmail] = useState("")
-    const handleNewsLetterSignUp = e => {
-        e.preventDefault()
-    }
+    let navigate = useNavigate();
 
     return (
         <div className="landing container">
             <div className="hero">
+                <Nav/>
                 <h1>PLANT A TREE, PLANT HOPE FOR THE FUTURE</h1>
-                <span className="buttons">
-                    <NavLink to={"/home/register"}>Register</NavLink>
-                    <NavLink to={"/home/login"}>Raise a tree</NavLink>
-                </span>
+                    <div className="buttons">
+                        <Button value='Join Us' styleClass={"btns btns-joinus"} onClick={() => navigate('/joinus')}/>
+                        <Button value='Raise A Tree' styleClass={"btns btns-joinus"} onClick={() => navigate('/home/raise-a-tree')}/>
+                    </div>
             </div>
 
             <div className="heading">
@@ -53,21 +54,7 @@ const Landing = props => {
                 <img src={YoungTree} alt="young tree" />
             </div>
 
-            <div className="footer">
-                <span className="newsletter-signup">
-                    <h4>GET HOOKED! SIGN UP TO OUR NEWSLETTER TO GET REGULAR MAILS ABOUT LATEST TRENDS IN THE ECO-WORLD.</h4>
-
-                    <form onSubmit={e => handleNewsLetterSignUp(e)}>
-                        <input placeholder="Enter your email..." type="email" value={userEmail} onChange={e => setUserEmail(e.target.value)} />
-                        <button>SIGN UP</button>
-                    </form>
-                </span>
-                <span className="social-media">
-                    <Link to={"https://www.instagram.com/"}><FaInstagram /> </Link>
-                    <Link to={"https://www.facebook.com/"}><FaFacebookF /> </Link>
-                    <Link to={"https://www.twitter.com/"}><FaTwitter /> </Link>
-                </span>
-            </div>
+            <Footer/>
         </div>
     )
 }

@@ -7,6 +7,10 @@ import Landing from "../components/Landing/Views/Landing";
 import Input from "../components/Common/Forms/Input"
 import Select from "../components/Common/Forms/Select"
 import { useState } from "react";
+import Nav from "../Router/Nav"
+import Joinus from "../JoinUs/Joinus";
+import Paragraph from "../JoinUs/Paragraph";
+
 const RootRouter = props => {
     const [user, setUser] = useState({ username: "", password: "", selected: [] })
 
@@ -14,8 +18,11 @@ const RootRouter = props => {
         <Router>
             <Routes>
                 <Route path="/" element={<Landing />} />
+                <Route path="joinus" element={<Joinus />} />
                 <Route path="/test" element={<div>
+                    <Nav/>
                     test
+                    
                     <Input
                         label="Enter Username*"
                         name="username"
@@ -28,7 +35,10 @@ const RootRouter = props => {
                         onChange={e => setUser({...user, selected: e.target.value})}
                         name="selected" type="multipleSelect" value={user.selected}
                     />
+                    
                     {JSON.stringify(user)}
+
+                    <Paragraph></Paragraph>
                 </div>} />
             </Routes>
         </Router>

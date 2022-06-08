@@ -1,0 +1,37 @@
+.navbar {
+    background-color: #0F1E25;
+}
+
+.heading-joinus {
+    text-align: center;
+    color: #575757;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.heading-joinus h1{
+    font-size: 40px;
+    margin-top: 5%;
+}
+
+.heading-joinus h3{
+    font-size: 32px;
+    margin-top: 2%;
+    font-weight: 400;
+}
+
+.heading-joinus a{
+    color: #185470;
+    text-decoration: none;
+}
+
+.cards{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.ju-footer{
+    margin-top: 5%;
+}
