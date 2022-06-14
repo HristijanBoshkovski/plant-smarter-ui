@@ -1,5 +1,4 @@
 import React from "react";
-import Radio from "../components/Common/Forms/Radio";
 
 import Nav from "../Router/Nav"
 import Form from "./Form";
@@ -18,7 +17,7 @@ export const Register=({
             <div className="reg-text">
                 <h4>START FOR FREE</h4>
                 <h1>Create a new account</h1>
-                <h3>Already a member? <a href="#0">Login Here</a></h3>
+                <h3>Already a member? <a href="/login">Login Here</a></h3>
             </div>
             <div className="reg-form">
                 <Form/>

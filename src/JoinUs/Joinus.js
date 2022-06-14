@@ -18,7 +18,7 @@ function Joinus() {
             </div>
             <div className="heading-joinus">
                 <h1>TO REGISTER AND JOIN OUR TEAM CLICK BELOW ON ONE OF THE CATEGORIES AND START PLANTING TREES</h1>
-                <h3>You already have an account? <a href="#0">Login now!</a></h3>
+                <h3>You already have an account? <a href="/login">Login now!</a></h3>
             </div>
             <div className="cards">
                 <Card picture={BusinessMan} value="Business" altText="business-man-card" linkRef="#business-par"/>

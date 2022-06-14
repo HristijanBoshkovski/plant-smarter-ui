@@ -1,4 +1,4 @@
-.register-container {
+.register-container{
     background: url("../static/reg-login-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -8,7 +8,7 @@
 
 .reg-text{
     margin-left: 5%;
-    margin-top: 8%;
+    margin-top: 5%;
     color: #FFF;
     line-height: 1.5;
 }
