@@ -4,6 +4,7 @@ import NavBlack from "../Router/NavBlack";
 import { useNavigate } from "react-router-dom"
 
 import "./Tree.css"
+import Progress from "./Progress";
 
 function Tree() {
 
@@ -19,6 +20,10 @@ function Tree() {
                     <Button value={"JOIN US"} styleClass={"btns btn-hero"} onClick={() => navigate('/joinus')}></Button>
                 </div>
             </div>
+            
+            <div className="prog">
+                    <Progress />
+                </div>
         </div>
     )
 }
