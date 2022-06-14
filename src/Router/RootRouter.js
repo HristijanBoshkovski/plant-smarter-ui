@@ -9,6 +9,7 @@ import Select from "../components/Common/Forms/Select"
 import { useState } from "react";
 import Joinus from "../JoinUs/Joinus";
 import { Register } from "../Register-LogIn/Register";
+import Login from "../Register-LogIn/Login";
 
 
 const RootRouter = props => {
@@ -20,6 +21,7 @@ const RootRouter = props => {
                 <Route path="/" element={<Landing />} />
                 <Route path="joinus" element={<Joinus />} />
                 <Route path="/register" element={<Register/>} />
+                <Route path="/login" element={<Login />} />
                 <Route path="/test" element={<div>
                     test
                     

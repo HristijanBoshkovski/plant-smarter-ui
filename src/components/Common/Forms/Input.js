@@ -1,9 +1,10 @@
 import "./Input.css"
 
 const Input = props => (
-    <div className="form-component input">
+    <div className="form-component">
         {props.label === undefined ? null : <label>{props.label}</label>}
         <input 
+            className="input"
             placeholder={props.placeholder || ""} 
             name={props.name} 
             type={props.type} 
