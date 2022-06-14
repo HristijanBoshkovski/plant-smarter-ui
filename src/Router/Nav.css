@@ -45,3 +45,15 @@
     color: white;
     font-weight: 480;
   }
+
+  .header-class-hero a{
+    color: #0F1E25;
+  }
+
+  .header-class-hero a:hover,
+  .header-class-hero a:active,
+  .header-class-hero a.active {
+    color: #0F1E25;
+    font-weight: 480;
+  
+  }

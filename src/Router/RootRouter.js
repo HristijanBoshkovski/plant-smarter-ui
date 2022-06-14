@@ -10,6 +10,7 @@ import { useState } from "react";
 import Joinus from "../JoinUs/Joinus";
 import { Register } from "../Register-LogIn/Register";
 import Login from "../Register-LogIn/Login";
+import Tree from "../RaiseYourTree/Tree";
 
 
 const RootRouter = props => {
@@ -22,6 +23,7 @@ const RootRouter = props => {
                 <Route path="joinus" element={<Joinus />} />
                 <Route path="/register" element={<Register/>} />
                 <Route path="/login" element={<Login />} />
+                <Route path="raise-a-tree" element={<Tree />} />
                 <Route path="/test" element={<div>
                     test
                     

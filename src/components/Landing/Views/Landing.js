@@ -21,7 +21,7 @@ const Landing = props => {
                 <h1>PLANT A TREE, PLANT HOPE FOR THE FUTURE</h1>
                     <div className="buttons">
                         <Button value='Join Us' styleClass={"btns btns-joinus"} onClick={() => navigate('/joinus')}/>
-                        <Button value='Raise A Tree' styleClass={"btns btns-joinus"} onClick={() => navigate('/home/raise-a-tree')}/>
+                        <Button value='Raise A Tree' styleClass={"btns btns-joinus"} onClick={() => navigate('/raise-a-tree')}/>
                     </div>
             </div>
 

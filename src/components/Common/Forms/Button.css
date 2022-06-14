@@ -43,3 +43,12 @@
     margin-top: 2%;
     border: none;
 }
+
+.btn-hero{
+    background-color: #CFE594;
+    height: 65px;
+    width: 230px;
+    font-size: 36px;
+    color: #0B3835;
+    
+}
