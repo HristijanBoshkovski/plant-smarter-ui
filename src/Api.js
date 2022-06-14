@@ -24,13 +24,13 @@ export const UsersAPI = {
     }
 }
 
-export const CompaniesAPI = {
-    create: async (company) => template('POST', company, `${API_URL}/api/companies/company`),
-    update: async (company) => template('PUT', company, `${API_URL}/api/companies/company`),
-    read: async (company_id = null, hashed = false) => {
+export const ObjectsAPI = {
+    create: async object => template('POST', object, `${API_URL}/api/objects/object`),
+    update: async (object) => template('PUT', object, `${API_URL}/api/objects/object`),
+    read: async (object_id = null, hashed = false) => {
         const options = { method: 'GET', body: user }
-        let append = company_id === null ? "" : `?id=${user_id}&hashed=${hashed}`
-        const request = await fetch(`${API_URL}/api/companies/company${append}`, options)
+        let append = object_id === null ? "" : `?id=${user_id}&hashed=${hashed}`
+        const request = await fetch(`${API_URL}/api/objects/object${append}`, options)
         const response = await request.json()
         if (request.status >= 400) throw response
         return response
