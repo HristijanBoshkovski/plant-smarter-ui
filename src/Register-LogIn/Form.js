@@ -7,8 +7,8 @@ import Radio from "../components/Common/Forms/Radio";
 
 import "../components/Common/Radio.css"
 
-const Form = props =>{
-    const [user, setUser] = useState({ username: "", password: "", confirmPassword: "", name: "", email: "", surname: "", businessname: "", schoolname: "", selected: [] })
+const Form = props => {
+    const [user, setUser] = useState({ username: "", password: "", confirmPassword: "", name: "", email: "", surname: "", businessname: "", schoolname: "", selected: [], type: "individual" })
     const userType = [
         {
             id: 1,
@@ -27,10 +27,10 @@ const Form = props =>{
         }
     ];
     console.log('Userrr', user)
-    return(
+    return (
         <div className="form-container">
             <Input
-                placeholder = "First Name"
+                placeholder="First Name"
                 name="name"
                 type="text"
                 value={user.name}
@@ -38,7 +38,7 @@ const Form = props =>{
                 onChange={e => setUser({ ...user, [e.target.name]: e.target.value })}
             />
             <Input
-                placeholder = "Last Name"
+                placeholder="Last Name"
                 name="surname"
                 type="text"
                 value={user.surname}
@@ -46,15 +46,15 @@ const Form = props =>{
                 onChange={e => setUser({ ...user, [e.target.name]: e.target.value })}
             />
             <Input
-                placeholder = "E-mail"
+                placeholder="E-mail"
                 name="email"
                 type="email"
                 value={user.email}
                 styleClass="form-style"
                 onChange={e => setUser({ ...user, [e.target.name]: e.target.value })}
-             />
+            />
             <Input
-                placeholder = "Userame"
+                placeholder="Userame"
                 name="username"
                 type="text"
                 value={user.username}
@@ -62,7 +62,7 @@ const Form = props =>{
                 onChange={e => setUser({ ...user, [e.target.name]: e.target.value })}
             />
             <Input
-                placeholder = "Password"
+                placeholder="Password"
                 name="password"
                 type="text"
                 value={user.password}
@@ -70,7 +70,7 @@ const Form = props =>{
                 onChange={e => setUser({ ...user, [e.target.name]: e.target.value })}
             />
             <Input
-                placeholder = "Confirm Password"
+                placeholder="Confirm Password"
                 name="confirmPassword"
                 type="text"
                 value={user.confirmPassword}
@@ -78,10 +78,14 @@ const Form = props =>{
                 onChange={e => setUser({ ...user, [e.target.name]: e.target.value })}
             />
             <div className="radio-button">
-                <Radio radioButtons={userType} name="radio-btn"/>
+                <Radio 
+                    radioButtons={userType}
+                    name="type"
+                    onChange={e => setUser({ ...user, [e.target.name]: e.target.value })}
+                />
             </div>
             <Input
-                placeholder = "Business Name"
+                placeholder="Business Name"
                 name="businessname"
                 type="text"
                 value={user.businessname}
@@ -89,15 +93,15 @@ const Form = props =>{
                 onChange={e => setUser({ ...user, [e.target.name]: e.target.value })}
             />
             <Input
-                placeholder = "School Name"
+                placeholder="School Name"
                 name="schoolname"
                 type="text"
                 value={user.schoolname}
                 styleClass="form-style"
                 onChange={e => setUser({ ...user, [e.target.name]: e.target.value })}
             />
-            <Button value="Register" type="Submit" styleClass="btns btns-submit"/>
-            
+            <Button value="Register" type="Submit" styleClass="btns btns-submit" />
+
         </div>
     )
 }
