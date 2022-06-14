@@ -1,4 +1,5 @@
 import React from "react";
+import Radio from "../components/Common/Forms/Radio";
 
 import Nav from "../Router/Nav"
 import Form from "./Form";
@@ -9,6 +10,8 @@ export const Register=({
     value,
     linkValue
 }) => {
+    
+
     return(
         <div className="register-container">
             <div className="navbar-reg"><Nav/></div>
@@ -20,6 +23,7 @@ export const Register=({
             <div className="reg-form">
                 <Form/>
             </div>
+            
         </div>
     )
 };

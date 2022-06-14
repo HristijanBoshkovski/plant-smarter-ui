@@ -1,0 +1,20 @@
+.radio-button-wrapper {
+    color: white;
+    font-weight: 550;
+    margin: 2% 0 3% 0;
+    font-size: 1.2em;
+}
+
+.radio-button-wrapper:not(:first-child){
+    margin-left: 30px;
+}
+
+.radio-button-wrapper .radio-btn:focus{
+    outline: none;
+}
+
+.form-component.radio {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
