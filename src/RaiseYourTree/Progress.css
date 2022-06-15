@@ -1,8 +1,37 @@
 .progress-container{
     max-width:100%;
     background-color:#C8E690;
-    clip-path: polygon(100% 20%, 100% 100%, 0 80%, 0 0);
+    clip-path: polygon(100% 10%, 100% 100%, 0 90%, 0 0);
     padding: 200px;
+    
+}
+
+.loader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5%;
+}
+
+.loader h4{
+    font-size: 36px;
+    color: #13463D;
+    margin-top: 5%;
+}
+
+.donate{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-bar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .statistics{
@@ -35,3 +64,61 @@
     font-weight: 700;
     
 }
+
+--p{
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 1;
+  }
+  
+  .pie {
+    --p:20;      /* the percentage */
+    --b:80px;    /* the thickness */
+    --c:darkred; /* the color */
+    --w:500px;   /* the size*/
+    
+    width:var(--w);
+    aspect-ratio:1/1;
+    position:relative;
+    display:inline-grid;
+    margin:5px;
+    place-content:center;
+    font-size:80px;
+    font-weight:bold;
+    color: #13463D;
+  }
+  .pie:before,
+  .pie:after {
+    content:"";
+    position:absolute;
+    border-radius:50%;
+  }
+  .pie:before {
+    inset:0;
+    background:
+      radial-gradient(farthest-side,var(--c) 98%,#0000) top/var(--b) var(--b) no-repeat,
+      conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
+    -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+            mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+  }
+  .pie:after {
+    inset:calc(50% - var(--b)/2);
+    background:var(--c);
+    transform:rotate(calc(var(--p)*3.6deg - 90deg)) translate(calc(var(--w)/2 - 50%));
+  }
+  .animate {
+    animation:p 1s .5s both;
+  }
+  .no-round:before {
+    background-size:0 0,auto;
+  }
+  .no-round:after {
+    content:none;
+  }
+  @keyframes p{
+    from{--p:0;}
+  }
+  
+  body {
+    background:#ddd;
+  }

@@ -36,7 +36,15 @@
     
 }
 
-.prog {
+.score-board h2{
+    font-size: 48px;
+    font-weight: 500;
+    color: #CFE594;
+    margin-left: 15%;
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
 
-    
+.score-board{
+    margin-bottom: 5%;
 }
