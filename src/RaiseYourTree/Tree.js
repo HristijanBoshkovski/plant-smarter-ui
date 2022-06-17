@@ -17,7 +17,7 @@ function Tree() {
             <div className="hero-tree">
                 <NavBlack />
                 <div className="hero-text">
-                    <h1>RAISE YOUR TREE</h1>
+                    <h1>RAISE A TREE</h1>
                     <h3>Now is the time to take action. PLANT A TREE TODAY!</h3>
                     <Button value={"JOIN US"} styleClass={"btns btn-hero"} onClick={() => navigate('/joinus')}></Button>
                 </div>
@@ -36,7 +36,7 @@ function Tree() {
                 <Scoreboard person={"Person1"} trees={"12"} donations={"4.000MKD"}/>
             </div>
 
-            <div className="footer-container">
+            <div className="footer-container-tree">
                 <Footer />
             </div>
         </div>

@@ -1,8 +1,8 @@
-.tree-container{
+.tree-container {
     background-color: #0F1E25;
 }
 
-.hero-tree{
+.hero-tree {
     background-image: url("../static/treewallpaper.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,29 +14,29 @@
     height: 800px;
 }
 
-.hero-tree h1{
+.hero-tree h1 {
     font-style: italic;
     font-size: 64px;
     color: #C8E690;
 }
 
-.hero-tree h3{
+.hero-tree h3 {
     font-weight: 300;
     font-size: 32px;
     color: #FFF;
 }
 
-.hero-text{
+.hero-text {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
     flex-direction: column;
     width: 95%;
     height: 600px;
-    
+
 }
 
-.score-board h2{
+.score-board h2 {
     font-size: 48px;
     font-weight: 500;
     color: #CFE594;
@@ -45,6 +45,6 @@
     margin-bottom: 3%;
 }
 
-.score-board{
+.score-board {
     margin-bottom: 5%;
 }
