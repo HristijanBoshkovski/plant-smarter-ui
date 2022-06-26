@@ -48,3 +48,9 @@
 .score-board {
     margin-bottom: 5%;
 }
+
+.adding-tree{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}

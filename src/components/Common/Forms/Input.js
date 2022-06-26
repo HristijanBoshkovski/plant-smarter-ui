@@ -10,6 +10,7 @@ const Input = props => (
             type={props.type} 
             value={props.value} 
             onChange={e => props.onChange(e)} 
+            accept={props.accept}
         />
     </div>
 )
