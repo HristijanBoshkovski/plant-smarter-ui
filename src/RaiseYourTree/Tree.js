@@ -77,6 +77,7 @@ function Tree() {
                             <Input placeholder="Latitude" type="text" name="tree-latitude"/>
                             <Input placeholder="Longitude" type="text" name="tree-longitude"/>
                             <Input placeholder="Add a Picture" type="file" name="tree-pic" accept="image/*"/>
+                            <Button value={"Save"}  styleClass={"btns btn-save"} />
                         </Typography>
                     </Box>
                 </Modal>

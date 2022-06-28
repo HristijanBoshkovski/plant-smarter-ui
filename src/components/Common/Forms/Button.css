@@ -76,3 +76,13 @@
     border: 2px solid #04AA6D;
     color: #04AA6D;
 }
+
+.btn-save{
+    font-size: 1.05em;
+    width: 70px;
+    height: 40px;
+    border: 1px solid #076c47;
+    background-color: #04AA6D;
+    color: white;
+    box-shadow: none;
+}
