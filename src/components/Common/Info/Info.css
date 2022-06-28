@@ -1,0 +1,13 @@
+.info {
+    display: block;
+    width: 100%;
+    padding: 10px 6px;
+    box-sizing: border-box;
+    border-radius: .42rem;
+    text-align: center;
+}
+
+.info.warning { background: #D9A203; }
+.info.success { background: #2B9449; }
+.info.failure { background: #AB1D1A; }
+.info.pending { background: #3772D2; }

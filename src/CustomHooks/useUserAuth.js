@@ -15,5 +15,5 @@ export const useUserAuth = () => {
         localStorage.removeItem("user")
     }
 
-    return {user, login, logout}
+    return [user, login, logout]
 }
