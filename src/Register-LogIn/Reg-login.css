@@ -2,8 +2,10 @@
     background: url("../static/reg-login-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
     box-shadow: inset 900px 0px 1200px -10px #0F1E25;
+    padding-bottom: 40px;
+    box-sizing: border-box;
 }
 
 .reg-text{
