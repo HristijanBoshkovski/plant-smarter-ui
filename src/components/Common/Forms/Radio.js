@@ -7,17 +7,24 @@ const Radio = props => {
                 className="radio-btn"
                 name={props.name}
                 type="radio"
+                checked={props.value == el.value}
                 value={el.value}
                 onChange={e => props.onChange(e)}
             />
-            <label htmlFor={props.name}>{el.label}</label>
+            <label onClick={e => props.onChange({
+                target: {
+                    name: props.name,
+                    value: el.value
+                }
+            })} htmlFor={props.name}>{el.label}</label>
         </div>
     ))
-
     return (
         <div className="form-component radio">
             {props.label === undefined ? null : <label>{props.label}</label>}
-            {radioButtons}
+            <span>
+                {radioButtons}
+            </span>
         </div>
     )
 }

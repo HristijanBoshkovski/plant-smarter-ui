@@ -1,13 +1,11 @@
 import React, { useState } from "react";
+import { Navigate } from "react-router-dom"
 
-import Nav from "../Router/Nav"
-import RegisterJSX from "./RegisterJSX";
-
-import "./Reg-login.css"
-import { useUserAuth } from "../CustomHooks/useUserAuth";
+import RegisterJSX from "./Register.jsx";
 import { UsersAPI } from "../Api";
 import { validateEmail } from "../common";
-import { Navigate } from "react-router-dom"
+import { useUserAuth } from "../CustomHooks/useUserAuth";
+import "./Reg-login.css"
 
 export const Register = ({
     value,
