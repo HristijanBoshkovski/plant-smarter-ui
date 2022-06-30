@@ -37,7 +37,7 @@ function Tree() {
     const [tree, setTree] = React.useState({
         tree_lat: null,
         tree_lon: null,
-        user_id: user.id,
+        user_id: user?.id,
         picture: null
     })
 

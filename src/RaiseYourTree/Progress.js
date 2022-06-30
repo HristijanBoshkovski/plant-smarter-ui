@@ -10,7 +10,7 @@ const Progress = props => {
     const [user] = useUserAuth()
     const openForm = () => document.getElementById("myForm").style.display = "block";
     const closeForm = () => document.getElementById("myForm").style.display = "none";
-    const numTrees = props.trees.filter(tree => tree.user_id == user.id).length
+    const numTrees = props.trees.filter(tree => tree.user_id == user?.id).length
     return (
         <div className="progress-container">
             <h2>YOUR PROGRESS</h2>
