@@ -1,0 +1,40 @@
+.profile-info {
+    background: #EFEFEF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.profile-info > img {
+    width: 100%;
+    max-width: 500px;
+}
+
+.user-trees {
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.user-trees > .planted-tree-card {
+    display: flex;
+    width: 100%;;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(31, 45, 65, 0.15);
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 20px 0px;
+}
+
+.user-trees > .planted-tree-card > img {
+    width: 300px;
+    border-right: 1px solid #DDD;
+}
+
+.user-trees > .planted-tree-card > span {
+    padding: 10px;
+}

@@ -13,10 +13,10 @@ const RegisterSuccess = props => {
     const [user, login, logout] = useUserAuth()
 
     const [object, setObject] = useState({
-        object_type: "business",
-        name: "",
-        email: "",
-        bio_info: "",
+        object_type: "school",
+        name: "FIKT",
+        email: "fikt@uklo.edu.mk",
+        bio_info: "FIKT is a faculty for IT located in Bitola under the UKLO university.",
         picture: null,
     })
     const [redirect, setRedirect] = useState(false)
@@ -31,6 +31,9 @@ const RegisterSuccess = props => {
             submitted: false, type: "idle", message: ""
         })
     }
+
+    console.log(JSON.parse(localStorage.getItem("user")).user.id)
+
     const handleSubmit = async e => {
         e.preventDefault()
 
@@ -58,11 +61,11 @@ const RegisterSuccess = props => {
         form.append("email", object.email)
         form.append("bio_info", object.bio_info)
         form.append("picture", object.picture)
-        form.append("creator_id", user.id)
+        form.append("creator_id", JSON.parse(localStorage.getItem("user")).user.id)
         ObjectsAPI.create(form)
             .then(res => {
                 setSubmitHandler({ type: "success", message: "Register success.", submitted: true })
-                setRedirect("/establishment_profile/"+user.id)
+                setRedirect("/raise-a-tree/")
             })
             .catch(error => setSubmitHandler({ type: "error", message: error.message, submitted: true }))
 

@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { Button } from "../components/Common/Forms/Button";
-
 import "./Reg-login.css"
-
 import Input from "../components/Common/Forms/Input"
 import { NavLink, Navigate } from "react-router-dom";
 import { validateEmail } from "../common";
@@ -56,10 +54,15 @@ const Login = props => {
     const [redirect, setRedirect] = useState(false)
     const [_user, login, logout] = useUserAuth()
     
+    useEffect(() => { 
+        if (_user !== null) setRedirect("/profile/" + _user.id) 
+    }, [_user])
+
     const handleChange = e => {
         setUser({ ...user, [e.target.name]: e.target.value })
         setSubmitHandler({ submitted: false, type: "idle", message: "" })
     }
+    
     const handleSubmit = async e => {
         e.preventDefault()
 
@@ -74,9 +77,8 @@ const Login = props => {
         UsersAPI.login(form)
             .then(res => {
                 login(res)
-                setRedirect("/profile/" + _user.user.id)
             })
-            .catch(error => setSubmitHandler({ type: "error", message: error.message, submitted: true }))
+            .catch(error => setSubmitHandler({ type: "failure", message: error.message, submitted: true }))
 
     }
 

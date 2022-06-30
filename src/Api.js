@@ -4,8 +4,8 @@ const API_URL = "http://104.248.112.235:5000"
 const template = async (method, body, url) => {
     const options = { method, body }
     const request = await fetch(url, options)
-    if (request.status >= 400) throw response
     const response = await request.json()
+    if (request.status >= 400) throw response
     return response
 }
 
@@ -41,7 +41,7 @@ export const TreesAPI = {
     create: async (tree) => template('POST', tree, `${API_URL}/api/trees/trees`),
     read: async (user_id = null, hashed = false) => {
         const options = { method: 'GET' }
-        let append = user_id === null ? "" : `?id=${user_id}&hashed=${hashed}`
+        let append = user_id === null ? "" : `?user_id=${user_id}&hashed=${hashed}`
         const request = await fetch(`${API_URL}/api/trees/trees${append}`, options)
         const response = await request.json()
         if (request.status >= 400) throw response

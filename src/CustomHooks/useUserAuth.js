@@ -1,12 +1,13 @@
 import { useState } from "react"
 
 export const useUserAuth = () => {
-    const current = localStorage.getItem("user")
+    let current = localStorage.getItem("user")
+    if (current?.user !== undefined) current = current.user
 
-    const [user, setUser] = useState(current === null ? current : JSON.parse(current).user)
+    const [user, setUser] = useState(current === null ? current : JSON.parse(current)?.user === undefined ? JSON.parse(current) : JSON.parse(current).user)
     
     const login = user => {
-        setUser(user)
+        setUser(user.user)
         localStorage.setItem("user", JSON.stringify(user))
     }
 

@@ -16,7 +16,7 @@ export const Scoreboard = ({
             </div>
             <div className="scores">
                 <span className="material-icons-outlined">forest</span><h3>{trees}</h3>
-                <span className="material-icons-outlined">paid</span><h3>{donations}</h3>
+                <span className="material-icons-outlined">paid</span><h3>{trees * 150} MKD</h3>
             </div>
         </div>
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom"
 
 import RegisterJSX from "./Register.jsx";
@@ -20,6 +20,11 @@ export const Register = ({
         type: "idle",
         message: ""
     })
+
+    useEffect(() => {
+        if (_user !== null)
+        setRedirect("/register-success")
+    }, [_user])
 
     const handleChange = e => {
         setUser({ ...user, [e.target.name]: e.target.value })
@@ -59,7 +64,6 @@ export const Register = ({
             .then(res => {
                 login(res)
                 setSubmitHandler({ type: "success", message: "Register success.", submitted: true })
-                setRedirect("/register-success")
             })
             .catch(error => setSubmitHandler({ type: "error", message: error.message, submitted: true }))
 

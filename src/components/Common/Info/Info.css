@@ -9,5 +9,5 @@
 
 .info.warning { background: #D9A203; }
 .info.success { background: #2B9449; }
-.info.failure { background: #AB1D1A; }
+.info.failure, .info.error { background: #AB1D1A; color: #FFF; }
 .info.pending { background: #3772D2; }
